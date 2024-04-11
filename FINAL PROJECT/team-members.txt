@@ -1,0 +1,16 @@
+COMP1002 Final Project
+
+Participants Information:
+ 
+Student Name	Student Number
+Zeel    	200553401
+Hiya Jayswal  	200578344 
+Dolcy Dolcy	200576527
+
+Reference of each parts:
+
+Product page and Buy page: : Hiya
+Home page, About us: Zeel
+Contact us: Dolcy
+
+Styling is done by all of us 
