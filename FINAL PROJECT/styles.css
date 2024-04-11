@@ -1,0 +1,200 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+    /* Adding background image */
+    background-image: url('bg.jpg');
+    background-size: cover; /* Cover the entire background */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Do not repeat the background image */
+  }
+  
+  .container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0px;
+    background-color: rgba(255, 255, 255, 0.8); /* Adding semi-transparent background */
+  }
+  
+  h1 {
+    color: #333;
+  }body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+    background-image: url('bg.jpg'); /* Background image URL */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+  }
+  
+  .logo img {
+    width: 40px; /* Adjust size of the logo */
+  }
+  
+  nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  nav ul li {
+    display: inline;
+    margin-left: 20px;
+  }
+  
+  nav ul li a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0%;
+    background-color: rgba(255, 255, 255, 0.8); /* Adding semi-transparent background */
+  }
+  
+  h1, h2, p {
+    margin-bottom: 20px;
+  }
+  
+  .image-container {
+    text-align: center;
+  }
+  
+  .image-container img {
+    display: block;
+    margin: 10px;
+  }
+  
+  video {
+    
+    width: 30%;
+    height: auto;
+    margin: 0 auto;
+    padding: 10px 20px;
+  }
+  
+  /* Team members styling */
+  .team-members {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .member {
+    text-align: center;
+  }
+  
+  .member img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+  }
+  
+  .member h3 {
+    color: #333;
+  }
+  
+  .member p {
+    color: #666;
+  }
+  
+  /* Footer styles */
+  footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #333;
+    color: #fff;
+    position: fixed;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+  }
+
+  
+  p {
+    color: #666;
+  }
+  /* Your existing CSS styles */
+
+.product-info {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .product-image {
+    flex: 1;
+  }
+  
+  .product-image img {
+    max-width: 50%;
+    height: auto;
+    position: center;
+  }
+  
+  .product-details {
+    flex: 1;
+    padding-left: 50px;
+  }
+  
+  .price {
+    font-size: 24px;
+    color: #f90;
+  }
+  
+  .description {
+    margin-top: 20px;
+  }
+  
+  .buy-now-btn {
+    background-color: #f90;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    margin-top: 20px;
+  }
+  
+  .buy-now-btn:hover {
+    background-color: #d58000;
+  }
+  
+  .team-members {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .member {
+    text-align: center;
+  }
+  
+  .member img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+  }
+  
+  .member h3 {
+    color: #333;
+  }
+  
+  .member p {
+    color: #666;
+  }
+  

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Purchase Form</title>
+  <link rel="stylesheet" href="about_us.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+          <img src="logo.jpg" alt="RetroDHZ Logo">
+        </div>
+        <nav>
+          <ul>
+            <li><a href="home_page.html">Home</a></li>
+            <li><a href="product.html">Product</a></li>
+            <li><a href="about_us.html">About Us</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </nav>
+      </header>
+  <div class="container">
+    <div class="description">
+    <h1>Product Purchase Form</h1>
+    <form id="purchaseForm">
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div class="form-group">
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" required>
+      </div>
+      <div class="form-group">
+        <label for="quantity">Quantity:</label>
+        <input type="number" id="quantity" name="quantity" min="1" required>
+      </div>
+      <div class="form-group">
+        <label for="address">Shipping Address:</label>
+        <textarea id="address" name="address" required></textarea>
+      </div>
+      <div class="form-group">
+        <label for="creditCard">Credit Card Number:</label>
+        <input type="text" id="creditCard" name="creditCard" required>
+      </div>
+      <div class="form-group">
+        <label for="expiry">Expiration Date:</label>
+        <input type="text" id="expiry" name="expiry" placeholder="MM/YY" required>
+      </div>
+      <div class="form-group">
+        <label for="cvv">CVV/CVC Code:</label>
+        <input type="text" id="cvv" name="cvv" required>
+      </div>
+      <div class="form-group">
+        <label for="billingAddress">Billing Address:</label>
+        <textarea id="billingAddress" name="billingAddress"></textarea>
+      </div>
+      <div class="form-group">
+        <label for="notes">Additional Notes or Instructions:</label>
+        <textarea id="notes" name="notes"></textarea>
+      </div>
+      <div class="form-group">
+        <input type="checkbox" id="terms" name="terms" required>
+        <label for="terms">I agree to the Terms and Conditions</label>
+      </div>
+      <div class="form-group">
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+      </div>
+    </form>
+</div>
+  </div>
+
+  <script>
+    document.getElementById("purchaseForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+
+      // Validation
+      const name = document.getElementById("name").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const phone = document.getElementById("phone").value.trim();
+      const quantity = document.getElementById("quantity").value.trim();
+      const address = document.getElementById("address").value.trim();
+      const creditCard = document.getElementById("creditCard").value.trim();
+      const expiry = document.getElementById("expiry").value.trim();
+      const cvv = document.getElementById("cvv").value.trim();
+      const terms = document.getElementById("terms").checked;
+
+      // Name validation
+      const namePattern = /^[a-zA-Z\s]+$/;
+      if (name === "" || !namePattern.test(name)) {
+        alert("Please enter a valid name (letters and spaces only).");
+        return;
+      }
+
+      if (email === "" || phone === "" || quantity === "" || address === "" || creditCard === "" || expiry === "" || cvv === "" || !terms) {
+        alert("Please fill out all required fields.");
+        return;
+      }
+
+      // Email validation
+      const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailPattern.test(email)) {
+        alert("Please enter a valid email address.");
+        return;
+      }
+
+      //phone validation
+      const phoneno = ^\d{10}$;
+      if (!phoneno.test(phoneno)){alert("Please enter a valid 10 digit phone number.");
+      return;
+    }
+
+      // Credit card validation
+      const cardPattern = /^\d{16}$/;
+      if (!cardPattern.test(creditCard)) {
+        alert("Please enter a valid credit card number.");
+        return;
+      }
+
+      // Expiry validation (format: MM/YY)
+      const expiryPattern = /^(0[1-9]|1[0-2])\/\d{2}$/;
+      if (!expiryPattern.test(expiry)) {
+        alert("Please enter a valid expiration date in the format MM/YY.");
+        return;
+      }
+
+// CVV validation (3 digits)
+const cvvPattern = /^\d{3}$/;
+if (!cvvPattern.test(cvv)) {
+  alert("Please enter a valid CVV/CVC code (3 digits).");
+  return;
+}
+
+// If all validations pass, submit the form
+alert("Form submitted successfully!");
+// You can add code to submit the form data to the server here
+});
+
+document.querySelector("button[type='reset']").addEventListener("click", function() {
+document.getElementById("purchaseForm").reset();
+});
+</script>
+
+
+<footer id="footer"></footer>
+
+<script src="script.js"></script>
+</body>
+</html>

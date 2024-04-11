@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact - RetroTech</title>
+  <link rel="stylesheet" href="about_us.css">
+</head>
+<body>
+    <header>
+      <div class="logo">
+        <img src="logo.jpg" alt="RetroDHZ Logo">
+      </div>
+      <nav>
+        <ul>
+          <li><a href="home_page.html">Home</a></li>
+          <li><a href="#product">Product</a></li>
+          <li><a href="about_us.html">About Us</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div class="container">
+  <main>
+    <section class="hero">
+      <h2>Contact Us</h2>
+      <p>Have any questions or concerns? Contact us using the form below.</p>
+    </section>
+    <form id="contactForm" action="/submit_contact_form" method="post">
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name" required><br>
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required><br>
+        <label for="message">Message:</label><br>
+        <textarea id="message" name="message" required></textarea><br>
+        <input type="submit" value="Submit">
+    </form>
+    
+    <script>
+        document.getElementById("contactForm").addEventListener("submit", function(event) {
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("email").value;
+            var message = document.getElementById("message").value;
+    
+            // Simple validation
+            if (name.trim() === "" || email.trim() === "" || message.trim() === "") {
+                alert("Please fill in all fields.");
+                event.preventDefault();
+            }
+            // Email validation using regular expression
+            else if (!isValidEmail(email)) {
+                alert("Please enter a valid email address.");
+                event.preventDefault();
+            }
+            // Name validation
+            else if (!isValidName(name)) {
+                alert("Please enter a valid name.");
+                event.preventDefault();
+            }
+        });
+    
+        function isValidEmail(email) {
+            // Regular expression for basic email validation
+            var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return emailRegex.test(email);
+        }
+    
+        function isValidName(name) {
+            // Regular expression for name validation (letters, spaces, hyphens)
+            var nameRegex = /^[A-Za-z\s\-']+$/;
+            return nameRegex.test(name);
+        }
+    </script>
+    
+  </main>
+</div>
+  <footer>
+    <p>&copy; 2024 RetroTech. All rights reserved.</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
